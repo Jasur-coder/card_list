@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "Roboto";
+    src: url(../assets/Roboto-Regular.ttf);
+    font-weight: 400;
+} 
+@font-face {
+    font-family: "Philosopher";
+    src: url(../assets/Philosopher-Bold.ttf);
+    font-weight: 700;
+} 
+
+
