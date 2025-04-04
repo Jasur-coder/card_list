@@ -2,21 +2,17 @@ import React from "react";
 import { Rating } from "react-simple-star-rating";
 import "./card.css";
 
-function Piece({title, price, }) {
+function Piece({title, price, description, image, id, rating}) {
     return (
-        <div className="grid">
-            {menu.map(el => {
-              
-
-                return (
-                    <div key={el.id} className="card">
-                        <img src={el.image} alt={el.title} className="card-img" />
+           
+                    <div key={id} className="card">
+                        <img src={image} alt={title} className="card-img" />
                         <div className="card-info">
                             <div className="card-info_top">
-                                <h2 className="card-title">{el.title}</h2>
-                                <span className="card-price">{el.price}$</span>
+                                <h2 className="card-title">{title}</h2>
+                                <span className="card-price">{price}$</span>
                             </div>
-                            <p className="card-text">{el.description}</p>
+                            <p className="card-text">{description}</p>
                             <div className="card-rate">
                                 <button className="card-btn">+</button>
                                 <div className="star-rating">
@@ -25,9 +21,7 @@ function Piece({title, price, }) {
                             </div>
                         </div>
                     </div>
-                )
-            })}
-        </div>
+
     )
 }
 

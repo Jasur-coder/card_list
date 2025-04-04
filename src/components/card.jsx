@@ -16,22 +16,21 @@ function Card() {
     useEffect(() => {
         getMenu()
     }, [])
-    
+
 
     return (
 
-        <>
-         {
-            menu.map(el => {
-                const rating = Math.round(el.rating.rate)
+            <div className="grid">
+                {
+                    menu.map(el => {
+                        const rating = Math.round(el.rating.rate)
+                        return (
+                            <Piece key={el.id} price={el.price} description={el.description} title={el.title} image={el.image} rating={rating} />
+                        )
+                    })
+                }
+            </div>
 
-                return(
-                    <Piece key={el.id} price={el.price} />
-                )
-            })
-        }
-        </>
-       
     )
 }
 
